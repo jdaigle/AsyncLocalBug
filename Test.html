@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+    <form method="post" action="/foo">
+        <button type="submit">Go</button>
+        <input id="PostValue" name="foobar" type="hidden" value="" />
+    </form>
+    <script>
+        var value = "";
+        for (var i = 0; i < 48 * 1024; i++) {
+            value += "X"
+        }
+        document.getElementById("PostValue").value = value;
+    </script>
+</body>
+</html>
